@@ -1,0 +1,25 @@
+Access-Control-Allow-Headers=>    Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
+Access-Control-Allow-Methods =>   Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Origin =>    Access-Control-Allow-Origin:  https://developer.mozilla.org
+Access-Control-Expose-Headers=>   Access-Control-Expose-Headers: Content-Encoding
+Allow =>                          Allow: GET, POST, HEAD
+Clear-Site-Data=>                 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
+Content-Disposition=>             Content-Disposition: attachment; filename="filename.jpg"
+Content-Encoding=>                Content-Encoding: deflate, gzip
+Content-Language=>                Content-Language: de-DE, en-CA
+Content-Length=>                  Content-Length: <length>
+Content-Location=>                Content-Location: /documents/foo.json
+Content-Type=>                    Content-Type: text/html; charset=UTF-8
+Cookie=>   ..                       Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+Date=>                            Date: Wed, 21 Oct 2015 07:28:00 GMT
+Etag=>                            ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+Expect=>                          Expect: 100-continue
+Expires=>                         Expires: Wed, 21 Oct 2015 07:28:00 GMT
+From=>                            From: webmaster@example.org
+Keep-Alive=>                      Keep-Alive: timeout=5, max=1000
+Last-Modified=>                   Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+Location=>                        Location: /index.html
+Origin=>                          Origin: https://developer.mozilla.org
+Retry-After=>                     Retry-After: 120
+Server=>                          Server: Apache/2.4.1 (Unix)
+WWW-Authenticate=> ..               WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"

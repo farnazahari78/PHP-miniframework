@@ -1,0 +1,14 @@
+{
+    "name": "nomatter/prj",
+    "require": {
+        "illuminate/database": "^8.42",
+        "illuminate/events": "^8.42",
+      "ext-openssl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app",
+            "app\\": "app"
+        }
+    }
+}
