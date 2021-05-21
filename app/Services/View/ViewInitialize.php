@@ -186,7 +186,7 @@ trait ViewInitialize
 
     private static function generateCsrf(): void
     {
-        $hashCode =   md5(openssl_random_pseudo_bytes(30));
+        $hashCode =   hash("sha256",hashGenerator(10));
 
         session()->put(["_token"=>$hashCode]);
 

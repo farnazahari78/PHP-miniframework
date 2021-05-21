@@ -1,6 +1,5 @@
 <?php
 ob_start();
-
 require_once "vendor/autoload.php";
 
 require_once "bootstrap/constants.php";

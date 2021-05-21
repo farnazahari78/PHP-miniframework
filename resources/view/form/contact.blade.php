@@ -53,7 +53,7 @@
                                 endif;
                             ?>
                         </div>
-                        <form name="sentMessage" method="post" action="/contact">
+                        <form name="sentMessage" method="post" action="<?=url("/contact")?>">
                             @csrf
 
                             @method("put")

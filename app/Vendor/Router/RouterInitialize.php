@@ -3,6 +3,7 @@
 
 namespace App\Vendor\Router;
 
+use App\Services\ConfigReader;
 use App\Services\View\View;
 use App\Vendor\Request\Request;
 
@@ -25,12 +26,26 @@ class RouterInitialize
 
     private static function routeIni(): mixed
     {
+
         $allRegisteredRoutes = file_get_contents("routes/web.php");
 
         $requestInstance = Request::makeInstance();
 
         $uriIni = explode("/",trim($requestInstance->path(),'/'));
 
+        $routeConfig = ConfigReader::getConfig("router");
+
+        if (in_array($routeConfig["Directory"],$uriIni)){
+
+            unset($uriIni[array_key_exists($routeConfig["Directory"],$uriIni)]);
+
+        }
+
+        if (count($uriIni) == 0){
+
+            array_push($uriIni,'');
+
+        }
 
         array_walk($uriIni,function (&$value){
 

@@ -26,7 +26,7 @@
                                 endif;
                             ?>
                         </div>
-                        <form name="sentMessage" method="post" action="/login">
+                        <form name="sentMessage" method="post" action="<?=url("/login")?>">
 
                             @csrf
 

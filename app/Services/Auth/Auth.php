@@ -70,7 +70,7 @@ class Auth
     private static function rememberMe(Model $user)
     {
 
-        $rememberMeToken = hash("sha256",openssl_random_pseudo_bytes(20));
+        $rememberMeToken = hash("sha256",hashGenerator(10));
 
         session_id(session_create_id("rem"));
 

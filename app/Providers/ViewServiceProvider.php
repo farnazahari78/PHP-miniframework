@@ -11,9 +11,9 @@ class ViewServiceProvider implements ServiceProvider
 
     public static function register()
     {
-        $menu = [["name"=>"home","path"=>"/"],["name"=>"about","path"=>"/about"]
+        $menu = [["name"=>"home","path"=>url("/")],["name"=>"about","path"=>url("/about")]
 
-            ,["name"=>"contact","path"=>"/contact"],["name"=>"login","path"=>"/login"]];
+            ,["name"=>"contact","path"=>url("/contact")],["name"=>"login","path"=>url("/login")]];
 
         View::share(["menu"=>$menu]);
     }

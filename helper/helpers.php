@@ -1,4 +1,7 @@
 <?php
+
+use App\Services\ConfigReader;
+
 function session(): \App\Vendor\Session\Store
 {
     return \App\Vendor\Session\Store::makeInstance();
@@ -31,4 +34,22 @@ function old(): \App\Vendor\MessageBag\OldInputs
 function assets(string $path): string
 {
     return "resources/".$path;
+}
+
+function url(string $route): string
+{
+    $routeConfig = ConfigReader::getConfig("router");
+
+    return  strlen($routeConfig["Directory"]) == 0 ? $route :  "/".$routeConfig["Directory"].$route;
+
+}
+function hashGenerator(int $length) : string
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }
